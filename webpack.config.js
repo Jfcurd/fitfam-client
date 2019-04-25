@@ -11,6 +11,10 @@ module.exports = {
     path: path.join(__dirname, '/dist'),
     filename: 'bundle.min.js'
   },
+  devServer: {
+    compress: true,
+    port: 3001
+  },
   module: {
     rules: [
       {
