@@ -1,12 +1,12 @@
 import * as React from 'react';
+import { Navbar } from './common/navbar';
 
-class App extends React.Component<{}, {}> {
-  render() {
-    return (<div>
-      <h1>HI MOM</h1>
-    </div>
+export class App extends React.Component<{}, {}> {
+  public render() {
+    return (
+      <div className='app'>
+        <Navbar />
+      </div>
     );
   }
 }
-
-export default App;
