@@ -1,0 +1,30 @@
+@import "../../fonts.scss";
+@import "../../colors.scss";
+
+.sidebar {
+  width: 200px;
+  background-color: $dark-background;
+  height: 100%;
+
+  .sidebar-head {
+    font-family: "Gugi", cursive;
+    color: $white !important;
+    cursor: pointer;
+    padding: 10px;
+  }
+
+  .menu-list {
+    p,
+    a {
+      color: $white !important;
+
+      &:hover {
+        background-color: $red-hover !important;
+      }
+    }
+
+    ul li {
+      padding: 10px;
+    }
+  }
+}
