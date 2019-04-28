@@ -1,12 +1,25 @@
-$family-sans-serif: "Lato", sans-serif;
-
 html, body, #app, .app {
   height: 100%;
 }
 
+/** Flexbox **/
 .fl { display: flex; }
 .grow { flex: 1; }
 .co { flex-flow: column; }
-.fh { height: 100%; }
+
+/** Modifiers **/
+.fh { height: 100% !important; }
+.p1 { padding: 10px !important; }
+.p0\.5 { padding: 5px !important; }
+.pl1 { padding-left: 10px !important; }
+.m1 { margin: 10px !important; }
+.m0\.5 { margin: 5px !important; }
+.mt1 { margin-top: 10px !important; }
+.ds-bottom {
+  -webkit-box-shadow: inset rgba(0,0,0,.35) 0 -11px 10px -14px;
+  box-shadow: inset 0 -11px 10px -14px rgba(0,0,0,.35);
+}
+
+$family-sans-serif: "Lato", sans-serif;
 
 @import "./vendor/bulma-0.7.4/bulma.sass";

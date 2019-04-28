@@ -11,6 +11,7 @@ module.exports = {
   },
   output: {
     path: distPath,
+    publicPath: '/',
     filename: '[name].[hash].js',
     sourceMapFilename: '[file].map.json'
   },
@@ -59,7 +60,6 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      chunks: ['index', 'vendor'],
       template: './src/index.html'
     }),
     new ExtractTextPlugin({

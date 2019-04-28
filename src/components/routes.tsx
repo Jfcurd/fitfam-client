@@ -10,12 +10,14 @@ export class Routes extends React.Component<{}> {
     return (
       <div className="fl fh">
         <Sidebar />
-        <Switch>
-          <Route exact path="/" component={Dashboard} />
-          <Route exact path="/workouts" component={Workouts} />
-          <Route exact path="/workouts/create" component={CreateWorkout} />
-          <Redirect to="/" />
-        </Switch>
+        <div className="grow">
+          <Switch>
+            <Route exact path="/" component={Dashboard} />
+            <Route exact path="/workouts" component={Workouts} />
+            <Route exact path="/workouts/create" component={CreateWorkout} />
+            <Redirect to="/" />
+          </Switch>
+        </div>
       </div>
     );
   }

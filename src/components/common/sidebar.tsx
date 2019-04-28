@@ -6,7 +6,7 @@ export class Sidebar extends React.Component<{}> {
   public render() {
     return (
       <aside className="menu sidebar">
-        <p className="menu-label is-size-2 sidebar-head">
+        <p className="menu-label is-size-2 sidebar-head p1">
           FitFam
         </p>
         <ul className="menu-list">
