@@ -10,7 +10,7 @@ export class BasicLayout extends React.Component<IBasicLayoutProps> {
     return (
       <div>
         <div className="layout-header p1 ds-bottom">
-          <h1 className="title is-2 pl1">
+          <h1 className="pl1">
             {this.props.header}
           </h1>
         </div>

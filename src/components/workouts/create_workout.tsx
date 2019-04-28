@@ -1,6 +1,7 @@
 import * as React from "react";
 import { BasicLayout } from "components/common/basic_layout";
 import { CreateWorkoutCard } from "./create_workout_card";
+import './create_workout.scss';
 
 export class CreateWorkout extends React.Component<{}> {
   public render() {
@@ -16,6 +17,9 @@ export class CreateWorkout extends React.Component<{}> {
           <div className="field">
             <label className="label">Exercises</label>
             <CreateWorkoutCard></CreateWorkoutCard>
+          </div>
+          <div className="add-exercise">
+            Add Exercise
           </div>
         </div>
       </BasicLayout>

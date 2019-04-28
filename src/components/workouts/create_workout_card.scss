@@ -2,6 +2,24 @@
 
 .create-workout-card {
   border: 1px solid $grey-lighter;
-  padding: 10px;
   border-radius: 4px;
+  margin-bottom: 10px;
+
+  .card-section {
+    padding: 10px;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $grey-lighter;
+    }
+  }
+
+  .add-set {
+    text-align: center;
+    cursor: pointer;
+    padding: 5px;
+
+    &:hover {
+      background-color: $hover-background;
+    }
+  }
 }
