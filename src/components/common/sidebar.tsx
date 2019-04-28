@@ -17,7 +17,7 @@ export class Sidebar extends React.Component<{}> {
             <Link to="/workouts">My Workouts</Link>
           </li>
           <li>
-            <Link to="/workouts/create">Create Workouts</Link>
+            <Link to="/workouts/create">Create Workout</Link>
           </li>
         </ul>
       </aside>
