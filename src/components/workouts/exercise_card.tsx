@@ -21,27 +21,6 @@ export class ExerciseCard extends React.Component<IExerciseCardProps> {
           </div>
         </div>
         <div className="card-section">
-          {/* {this.props.workoutExercise.sets && this.props.workoutExercise.sets.map(set => (
-            <div className="field is-horizontal">
-              <div className="field-body">
-                <div className="field">
-                  <p className="control is-expanded">
-                    <input className="input" type="number" placeholder="Reps" />
-                  </p>
-                </div>
-                <div className="field">
-                  <p className="control is-expanded">
-                    <input className="input" type="number" placeholder="Weight" />
-                  </p>
-                </div>
-                <div className="field">
-                  <p className="control is-expanded">
-                    <input className="input" type="text" placeholder="Notes" />
-                  </p>
-                </div>
-              </div>
-            </div>
-          ))} */}
           <div className="field is-horizontal">
             <div className="field-body">
               <div className="field">
@@ -67,9 +46,5 @@ export class ExerciseCard extends React.Component<IExerciseCardProps> {
         </div>
       </div>
     );
-  }
-
-  private readonly addSet = () => {
-
   }
 }

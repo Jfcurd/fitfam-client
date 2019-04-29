@@ -5,7 +5,8 @@ export class Dashboard extends React.Component<{}> {
   public render() {
     return (
       <BasicLayout header="Dashboard">
-        Children here
+        <div>This is where I'd put my Dashboard...</div>
+        <div>IF I HAD ONE</div>
       </BasicLayout>
     );
   }
