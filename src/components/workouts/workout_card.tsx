@@ -1,4 +1,5 @@
 import * as React from 'react';
+import * as classnames from 'classnames';
 import { IWorkout } from 'src/api/models';
 import './workout_card.scss';
 import { Truncate } from 'components/common/truncate';
@@ -20,9 +21,9 @@ export class WorkoutCard extends React.Component<IWorkoutCardProps> {
         <div className="card-content">
           <div className="media">
             <div className="media-content">
-              <p className="title is-4">{this.props.workout.name}</p>
+              <p className={classnames("title", "is-4", !this.props.workout.name && "is-italic")}>{this.props.workout.name || 'No name!'}</p>
               <p className="subtitle is-6">
-                <time>{this.props.workout.created_at.toLocaleString()}</time>
+                <time>{this.props.workout.createdAt.toLocaleString()}</time>
               </p>
             </div>
           </div>

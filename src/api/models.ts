@@ -1,45 +1,45 @@
 export interface IExercise {
   id?: number;
   name?: string;
-  created_at?: Date;
-  updated_at?: Date;
+  createdAt?: Date;
+  updatedAt?: Date;
 }
 
 export interface IExerciseSet {
   id?: number;
-  workout_exersice_id?: number;
+  workoutExersiceId?: number;
   reps?: number;
   weight?: number;
   notes?: string;
-  created_at?: Date;
-  updated_at?: Date;
+  createdAt?: Date;
+  updatedAt?: Date;
 }
 
 export interface IUser {
   id?: number;
   name?: string;
   email?: string;
-  created_at?: Date;
-  updated_at?: Date;
+  createdAt?: Date;
+  updatedAt?: Date;
 }
 
 export interface IWorkout {
   id?: number;
-  user_id?: number;
+  userId?: number;
   name?: string;
-  started_at?: Date;
-  ended_at?: Date;
-  created_at?: Date;
-  updated_at?: Date;
+  startedAt?: Date;
+  endedAt?: Date;
+  createdAt?: Date;
+  updatedAt?: Date;
   exercises?: IWorkoutExercise[];
 }
 
 export interface IWorkoutExercise {
   id?: number;
-  workout_id?: number;
-  exercise_id?: number;
-  created_at?: Date;
-  updated_at?: Date;
+  workoutId?: number;
+  exerciseId?: number;
+  createdAt?: Date;
+  updatedAt?: Date;
   exercise?: IExercise;
   sets?: IExerciseSet[];
 }
