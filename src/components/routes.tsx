@@ -1,5 +1,4 @@
 import * as React from "react";
-import { Sidebar } from "components/common/sidebar";
 import { Route, Switch, Redirect } from "react-router";
 import { Dashboard } from "components/dashboard/dashboard";
 import { Workouts } from "components/workouts/workouts";

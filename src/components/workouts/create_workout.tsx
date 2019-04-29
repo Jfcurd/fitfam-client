@@ -1,6 +1,6 @@
 import * as React from "react";
 import { BasicLayout } from "components/common/basic_layout";
-import { CreateWorkoutCard } from "./create_workout_card";
+import { ExerciseCard } from "./exercise_card";
 import './create_workout.scss';
 import { IWorkout } from "src/api/models";
 import Client from "../../api/client";
@@ -12,6 +12,7 @@ interface ICreateWorkoutState {
 export class CreateWorkout extends React.Component<{}, ICreateWorkoutState> {
   public async componentDidMount() {
     const workout = await Client.Workouts.createEmpty();
+    workout.exercises = [];
     this.setState({ workout });
   }
 
@@ -30,13 +31,21 @@ export class CreateWorkout extends React.Component<{}, ICreateWorkoutState> {
           </div>
           <div className="field">
             <label className="label">Exercises</label>
-            <CreateWorkoutCard></CreateWorkoutCard>
+            {this.state.workout.exercises.map(exercise => (
+              <ExerciseCard workoutExercise={exercise}></ExerciseCard>
+            ))}
           </div>
-          <div className="add-exercise">
+          <div className="add-exercise" onClick={this.addExercise}>
             Add Exercise
           </div>
         </div>
       </BasicLayout>
     );
+  }
+
+  private readonly addExercise = () => {
+    var w = { ...this.state.workout }
+    w.exercises.push({});
+    this.setState({ workout: w })
   }
 }
