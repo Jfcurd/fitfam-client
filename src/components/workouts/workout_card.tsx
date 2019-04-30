@@ -4,6 +4,7 @@ import { IWorkout } from 'src/api/models';
 import './workout_card.scss';
 import { Truncate } from 'components/common/truncate';
 import { Link } from 'react-router-dom';
+import * as moment from 'moment';
 
 interface IWorkoutCardProps {
   workout: IWorkout;
@@ -23,7 +24,7 @@ export class WorkoutCard extends React.Component<IWorkoutCardProps> {
             <div className="media-content">
               <p className={classnames("title", "is-4", !this.props.workout.name && "is-italic")}>{this.props.workout.name || 'No name!'}</p>
               <p className="subtitle is-6">
-                <time>{this.props.workout.createdAt.toLocaleString()}</time>
+                <time>{moment(this.props.workout.createdAt).format('MM/DD/YYYY, hh:mm:ss a')}</time>
               </p>
             </div>
           </div>

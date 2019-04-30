@@ -10,6 +10,8 @@ interface IWorkoutsState {
 export class Workouts extends React.Component<{}, IWorkoutsState> {
   public async componentDidMount() {
     const workouts = await Client.Workouts.get();
+
+    // TODO: State management (mobx? redux?)
     this.setState({ workouts });
   }
 

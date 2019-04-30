@@ -13,6 +13,8 @@ export class CreateWorkout extends React.Component<{}, ICreateWorkoutState> {
   public async componentDidMount() {
     const workout = await Client.Workouts.createEmpty();
     workout.exercises = [];
+
+    // TODO: State management (mobx? redux?)
     this.setState({ workout });
   }
 
@@ -46,6 +48,8 @@ export class CreateWorkout extends React.Component<{}, ICreateWorkoutState> {
   private readonly addExercise = () => {
     var w = { ...this.state.workout }
     w.exercises.push({});
+
+    // TODO: State management (mobx? redux?)
     this.setState({ workout: w })
   }
 }
